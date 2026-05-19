@@ -1,5 +1,4 @@
 const args = process.argv.slice(2);
-console.log(args);
 const wordsList = args[0].split(" ");
 
 const vowels = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"];
@@ -13,7 +12,7 @@ for (let i = 0; i < wordsList.length; i++) {
     !vowels.includes(wordsList[i][0]) &&
     !vowels.includes(wordsList[i][1])
   ) {
-    tempWord = wordsList[i].slice(2) + wordsList[i].slice(0, 1) + "ay";
+    tempWord = wordsList[i].slice(2) + wordsList[i].slice(0, 2) + "ay";
   } else if (vowels.includes(wordsList[i][0])) {
     tempWord = wordsList[i] + "way";
   }
@@ -21,4 +20,4 @@ for (let i = 0; i < wordsList.length; i++) {
   finalstring += tempWord;
 }
 
-console.log(finalstring);
+console.log(`Output: ${finalstring}`);

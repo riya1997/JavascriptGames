@@ -1,5 +1,4 @@
 const args = process.argv.slice(2);
-//console.log(args);
 const wordsList = args[0].split(" ");
 const shiftNumber = Math.floor(args[1]);
 let parseWord = "";
