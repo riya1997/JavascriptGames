@@ -6,8 +6,8 @@ function rockGame(playerChoice) {
   const choices = ["rock", "paper", "scissors"];
 
   let compChoice = choices[Math.floor(Math.random() * choices.length)];
-  console.log("you chose:", playerChoice);
-  console.log("computer chose:", compChoice);
+  // console.log("you chose:", playerChoice);
+  // console.log("computer chose:", compChoice);
   if (compChoice === playerChoice) {
     console.log("It's a draw!");
   } else if (
@@ -15,14 +15,18 @@ function rockGame(playerChoice) {
     (playerChoice === "paper" && compChoice == "rock") ||
     (playerChoice === "scissors" && compChoice == "paper")
   ) {
-    console.log("You Win");
-    playerScore++;
+    console.log(
+      `Output: You chose ${playerChoice}. Computer chose ${compChoice}. You win!`,
+    );
+    //playerScore++;
   } else {
-    console.log("You Lose");
-    computerScore++;
+    console.log(
+      `Output: You chose ${playerChoice}. Computer chose ${compChoice}. You Lose`,
+    );
+    //computerScore++;
   }
-  console.log("Your Score:", playerScore);
-  console.log("Computer Score:", computerScore);
+  // console.log("Your Score:", playerScore);
+  // console.log("Computer Score:", computerScore);
 }
 
 const args = process.argv.slice(2);
